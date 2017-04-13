@@ -5751,6 +5751,16 @@ var UPGRADES= [
 		    }
 		    return m;
 		}.bind(this),str:"focus"});
+	 sh.adddicemodifier(ATTACK_M,REROLL_M,ATTACK_M,this,{
+		 req:function(a,w,t) {
+		 	var res = sh.canusetarget(t) && sh.stress==0;
+             return res;
+		 }.bind(this),
+		 n:function() {return 9;}.bind(this),
+		 dice:["blank"],
+		 f:function() {
+			 activeunit.removetarget(targetunit);
+		 }.bind(this),str:"target",token:true});
      }
      },
     {name:"BoShek",

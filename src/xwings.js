@@ -746,7 +746,7 @@ function reroll(n,from,to,a,id) {
 	    str+="<span class='"+r[i]+"reddice'></span>";
 	    $("#attack").append("<td class='"+r[i]+"reddice' noreroll></td>");
 	}
-	//activeunit.log("reroll: "+str);
+	activeunit.log("reroll: "+str);
 	addredclickchange();
     } else { 
 	for (i=0; i<3; i++) {
